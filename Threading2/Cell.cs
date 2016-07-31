@@ -28,7 +28,8 @@ namespace Threading2
                             Console.WriteLine(e);
                         }
                     }
-                    Console.WriteLine("Consume: {0}", cellContents);
+                Thread.Sleep(700);
+                Console.WriteLine("Consume: {0}", cellContents);
                     readerFlag = false;    // Reset the state flag to say consuming
                                            // is done.
                     Monitor.Pulse(this);   // Pulse tells Cell.WriteToCell that
@@ -58,6 +59,7 @@ namespace Threading2
                     }
                 }
                 cellContents = n;
+                Thread.Sleep(700);
                 Console.WriteLine("Produce: {0}", cellContents);
                 readerFlag = true;    // Reset the state flag to say producing
                                       // is done

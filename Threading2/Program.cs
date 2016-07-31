@@ -46,6 +46,7 @@ namespace Threading2
             // Even though Main returns void, this provides a return code to 
             // the parent process.
             Environment.ExitCode = result;
+            Console.WriteLine("The result value is {0}", result);
             Console.ReadLine();
         }
     }

@@ -1,4 +1,6 @@
-﻿namespace Threading2
+﻿using System.Threading;
+
+namespace Threading2
 {
     public class CellProd
     {
@@ -10,10 +12,12 @@
                 cell = box;          // Pass in what cell object to be used
                 quantity = request;  // Pass in how many items to produce in cell
             }
+
             public void ThreadRun()
             {
                 for (int looper = 1; looper <= quantity; looper++)
-                    cell.WriteToCell(looper);  // "producing"
+                
+                cell.WriteToCell(looper);  // "producing"
             }
      }
 }

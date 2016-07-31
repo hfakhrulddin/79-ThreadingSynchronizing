@@ -2,8 +2,8 @@
 {
     public class CellCons
     {
-            Cell cell;         // Field to hold cell object to be used
-            int quantity = 1;  // Field for how many items to consume from cell
+            Cell cell;               // Field to hold cell object to be used
+            int quantity = 1;        // Field for how many items to consume from cell
 
             public CellCons(Cell box, int request)
             {
